@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Spring Flowers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body lang="en">
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span>🌸</span> Spring Flowers</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="store-info.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-switcher" onclick="toggleLanguage()">EN / FR / عربي</button>
+        </div>
+    </header>
 
+    <section style="padding-top: 2rem;">
+        <h2 class="section-title lang-en">Our Collection</h2>
+        <h2 class="section-title lang-fr">Notre Collection</h2>
+        <h2 class="section-title lang-ar">مجموعتنا</h2>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="location.href='product-detail.html?id=0'">
+                <img src="https://kimi-web-img.moonshot.cn/img/cdn.uaeflowers.com/c0f85429eb0c5f5a93591175c95fe102723e9da4.webp" alt="Pink Tulips">
+                <div class="product-info">
+                    <h3 class="lang-en">Pink Tulip Bouquet</h3>
+                    <h3 class="lang-fr">Bouquet de Tulipes Roses</h3>
+                    <h3 class="lang-ar">باقة التوليب الوردي</h3>
+                    <div class="price">250 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=1'">
+                <img src="https://kimi-web-img.moonshot.cn/img/theflowershopatl.com/c83d8f16a6217b75f576dafa086907fc309985d1.jpg" alt="Spring Sentiment">
+                <div class="product-info">
+                    <h3 class="lang-en">Spring Sentiment</h3>
+                    <h3 class="lang-fr">Sentiment de Printemps</h3>
+                    <h3 class="lang-ar">إحساس الربيع</h3>
+                    <div class="price">350 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=2'">
+                <img src="https://kimi-web-img.moonshot.cn/img/dodomarket.mu/2b238902f4fba35b6732113cfd84f2b9f3de8a90.jpg" alt="Luxury Roses">
+                <div class="product-info">
+                    <h3 class="lang-en">Luxury Rose Box</h3>
+                    <h3 class="lang-fr">Boîte de Roses Luxe</h3>
+                    <h3 class="lang-ar">صندوق الورد الفاخر</h3>
+                    <div class="price">450 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=5'">
+                <img src="https://kimi-web-img.moonshot.cn/img/dragonettiflorist.com/64582739a2680b1ea787eafbcdd9ffa2ddc54e2b.jpg" alt="Spring Charm">
+                <div class="product-info">
+                    <h3 class="lang-en">Spring Charm</h3>
+                    <h3 class="lang-fr">Charme de Printemps</h3>
+                    <h3 class="lang-ar">سحر الربيع</h3>
+                    <div class="price">300 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=3'">
+                <img src="https://kimi-web-img.moonshot.cn/img/www.thedeliciouscrescent.com/ee190dabb02b9cf629dc5a56c17fa3474e0064c6.jpg" alt="Rose Ice Cream">
+                <div class="product-info">
+                    <h3 class="lang-en">Rose Ice Cream (Cup)</h3>
+                    <h3 class="lang-fr">Glace à la Rose (Coupe)</h3>
+                    <h3 class="lang-ar">مثلجات الورد (كوب)</h3>
+                    <div class="price">35 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=4'">
+                <img src="https://kimi-web-img.moonshot.cn/img/jajabakes.com/c2b8a41454b25a7ced2457d019a1a532d3ea10c3.jpg" alt="Rose Ice Cream Bowl">
+                <div class="product-info">
+                    <h3 class="lang-en">Rose Petal Ice Cream</h3>
+                    <h3 class="lang-fr">Glace Pétales de Rose</h3>
+                    <h3 class="lang-ar">مثلجات بتلات الورد</h3>
+                    <div class="price">50 MAD</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>🌸 Spring Flowers | زهور الربيع | Fleurs de Printemps 🌸</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
