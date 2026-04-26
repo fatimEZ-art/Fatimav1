@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order | Spring Flowers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body lang="en">
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span>🌸</span> Spring Flowers</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="store-info.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-switcher" onclick="toggleLanguage()">EN / FR / عربي</button>
+        </div>
+    </header>
 
+    <section class="order-section" style="margin-top: 2rem;">
+        <h2 class="section-title lang-en">Place Your Order</h2>
+        <h2 class="section-title lang-fr">Passer Votre Commande</h2>
+        <h2 class="section-title lang-ar">قدّم طلبك</h2>
+
+        <div class="cart-items" id="cartContainer">
+            <p class="lang-en" style="text-align:center; color: #888;">Your cart is empty.</p>
+            <p class="lang-fr" style="text-align:center; color: #888;">Votre panier est vide.</p>
+            <p class="lang-ar" style="text-align:center; color: #888;">سلة التسوق فارغة.</p>
+        </div>
+        
+        <h3 style="text-align: right; color: var(--dark-pink); margin-bottom: 2rem;">
+            <span class="lang-en">Total:</span>
+            <span class="lang-fr">Total:</span>
+            <span class="lang-ar">المجموع:</span>
+            <span id="cartTotal">0</span> MAD
+        </h3>
+
+        <form id="orderForm" onsubmit="submitOrder(event)">
+            <div class="form-group">
+                <label class="lang-en">Full Name</label>
+                <label class="lang-fr">Nom Complet</label>
+                <label class="lang-ar">الاسم الكامل</label>
+                <input type="text" required placeholder="John Doe / Jean Dupont / علي أحمد">
+            </div>
+
+            <div class="form-group">
+                <label class="lang-en">Phone Number</label>
+                <label class="lang-fr">Numéro de Téléphone</label>
+                <label class="lang-ar">رقم الهاتف</label>
+                <input type="tel" required placeholder="+212 6XX-XXXXXX">
+            </div>
+
+            <div class="form-group">
+                <label class="lang-en">Delivery Address</label>
+                <label class="lang-fr">Adresse de Livraison</label>
+                <label class="lang-ar">عنوان التوصيل</label>
+                <textarea rows="3" required placeholder="Street, City, Morocco"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="lang-en">Preferred Delivery Date</label>
+                <label class="lang-fr">Date de Livraison Souhaitée</label>
+                <label class="lang-ar">تاريخ التوصيل المفضل</label>
+                <input type="date" required>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem;">
+                <span class="lang-en">Confirm Order</span>
+                <span class="lang-fr">Confirmer la Commande</span>
+                <span class="lang-ar">تأكيد الطلب</span>
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <p>🌸 Spring Flowers | زهور الربيع | Fleurs de Printemps 🌸</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
