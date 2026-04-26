@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Spring Flowers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body lang="en">
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span>🌸</span> Spring Flowers</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="store-info.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-switcher" onclick="toggleLanguage()">EN / FR / عربي</button>
+        </div>
+    </header>
 
+    <section style="padding-top: 2rem;">
+        <div class="product-detail-container">
+            <div class="product-detail-img">
+                <img id="detailImg" src="" alt="Product">
+            </div>
+            <div class="product-detail-info">
+                <h1 id="detailTitle">Product Name</h1>
+                <p id="detailDesc">Description goes here.</p>
+                <div class="price" id="detailPrice" style="font-size: 2rem; margin: 20px 0;">0 MAD</div>
+                
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;">
+                    <label style="font-weight: bold;">
+                        <span class="lang-en">Quantity:</span>
+                        <span class="lang-fr">Quantité:</span>
+                        <span class="lang-ar">الكمية:</span>
+                    </label>
+                    <input type="number" id="detailQty" value="1" min="1" style="width: 60px; padding: 8px; border-radius: 5px; border: 1px solid #ddd;">
+                </div>
+
+                <button class="btn" onclick="addToCartFromDetail()">
+                    <span class="lang-en">Add to Order</span>
+                    <span class="lang-fr">Ajouter à la Commande</span>
+                    <span class="lang-ar">أضف إلى الطلب</span>
+                </button>
+                <br><br>
+                <a href="products.html" style="color: var(--dark-pink); text-decoration: none;">
+                    ← <span class="lang-en">Back to Products</span>
+                    <span class="lang-fr">Retour aux Produits</span>
+                    <span class="lang-ar">العودة إلى المنتجات</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>🌸 Spring Flowers | زهور الربيع | Fleurs de Printemps 🌸</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load product details based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        if (productId !== null && products[productId]) {
+            const p = products[productId];
+            document.getElementById('detailImg').src = p.img;
+            document.getElementById('detailTitle').innerText = p.name[currentLang];
+            document.getElementById('detailDesc').innerText = p.desc[currentLang];
+            document.getElementById('detailPrice').innerText = p.price + " MAD";
+            document.getElementById('detailImg').alt = p.name.en;
+            
+            // Store current product for cart
+            window.currentDetailProduct = p;
+        } else {
+            document.querySelector('.product-detail-container').innerHTML = '<h2>Product not found</h2>';
+        }
+
+        function addToCartFromDetail() {
+            if (!window.currentDetailProduct) return;
+            const qty = parseInt(document.getElementById('detailQty').value);
+            addToCart(window.currentDetailProduct, qty);
+            alert(currentLang === 'en' ? "Added to cart!" : currentLang === 'fr' ? "Ajouté au panier!" : "تمت الإضافة إلى السلة!");
+        }
+    </script>
+</body>
+</html>
