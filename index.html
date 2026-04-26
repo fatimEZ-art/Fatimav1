@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Flowers | زهور الربيع | Fleurs de Printemps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body lang="en">
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span>🌸</span> Spring Flowers</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="store-info.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-switcher" onclick="toggleLanguage()">EN / FR / عربي</button>
+        </div>
+    </header>
 
+    <section class="hero">
+        <h1 class="lang-en">Welcome to Spring Flowers</h1>
+        <h1 class="lang-fr">Bienvenue chez Fleurs de Printemps</h1>
+        <h1 class="lang-ar">مرحباً بكم في زهور الربيع</h1>
+
+        <p class="lang-en">Fresh flowers and delightful rose ice cream delivered to your door in Morocco.</p>
+        <p class="lang-fr">Fleurs fraîches et délicieuse glace à la rose livrées chez vous au Maroc.</p>
+        <p class="lang-ar">زهور طازجة ومثلجات ورد لذيذة تصل إلى باب منزلك في المغرب.</p>
+
+        <a href="products.html" class="btn">
+            <span class="lang-en">View Collection</span>
+            <span class="lang-fr">Voir la Collection</span>
+            <span class="lang-ar">عرض المجموعة</span>
+        </a>
+    </section>
+
+    <section>
+        <h2 class="section-title lang-en">Featured Products</h2>
+        <h2 class="section-title lang-fr">Produits en Vedette</h2>
+        <h2 class="section-title lang-ar">منتجات مميزة</h2>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="location.href='product-detail.html?id=0'">
+                <img src="https://kimi-web-img.moonshot.cn/img/cdn.uaeflowers.com/c0f85429eb0c5f5a93591175c95fe102723e9da4.webp" alt="Pink Tulips">
+                <div class="product-info">
+                    <h3 class="lang-en">Pink Tulip Bouquet</h3>
+                    <h3 class="lang-fr">Bouquet de Tulipes Roses</h3>
+                    <h3 class="lang-ar">باقة التوليب الوردي</h3>
+                    <div class="price">250 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=3'">
+                <img src="https://kimi-web-img.moonshot.cn/img/www.thedeliciouscrescent.com/ee190dabb02b9cf629dc5a56c17fa3474e0064c6.jpg" alt="Rose Ice Cream">
+                <div class="product-info">
+                    <h3 class="lang-en">Rose Ice Cream</h3>
+                    <h3 class="lang-fr">Glace à la Rose</h3>
+                    <h3 class="lang-ar">مثلجات الورد</h3>
+                    <div class="price">35 MAD</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='product-detail.html?id=2'">
+                <img src="https://kimi-web-img.moonshot.cn/img/dodomarket.mu/2b238902f4fba35b6732113cfd84f2b9f3de8a90.jpg" alt="Luxury Roses">
+                <div class="product-info">
+                    <h3 class="lang-en">Luxury Rose Box</h3>
+                    <h3 class="lang-fr">Boîte de Roses Luxe</h3>
+                    <h3 class="lang-ar">صندوق الورد الفاخر</h3>
+                    <div class="price">450 MAD</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>🌸 Spring Flowers | زهور الربيع | Fleurs de Printemps 🌸</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
