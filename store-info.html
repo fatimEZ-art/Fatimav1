@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Info | Spring Flowers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body lang="en">
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span>🌸</span> Spring Flowers</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="store-info.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-switcher" onclick="toggleLanguage()">EN / FR / عربي</button>
+        </div>
+    </header>
 
+    <section style="padding-top: 2rem;">
+        <h2 class="section-title lang-en">Store Information</h2>
+        <h2 class="section-title lang-fr">Informations du Magasin</h2>
+        <h2 class="section-title lang-ar">معلومات المتجر</h2>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>📍 <span class="lang-en">Address</span><span class="lang-fr">Adresse</span><span class="lang-ar">العنوان</span></h3>
+                <p>123 Avenue des Fleurs<br>Casablanca, Morocco</p>
+            </div>
+            <div class="info-card">
+                <h3>📞 <span class="lang-en">Phone</span><span class="lang-fr">Téléphone</span><span class="lang-ar">الهاتف</span></h3>
+                <p>+212 522-123456<br>+212 6XX-XXXXXX</p>
+            </div>
+            <div class="info-card">
+                <h3>⏰ <span class="lang-en">Hours</span><span class="lang-fr">Horaires</span><span class="lang-ar">الساعات</span></h3>
+                <p class="lang-en">Mon - Sat: 8:00 AM - 8:00 PM</p>
+                <p class="lang-fr">Lun - Sam: 8h00 - 20h00</p>
+                <p class="lang-ar">السبت - الاثنين: 8:00 ص - 8:00 م</p>
+            </div>
+            <div class="info-card">
+                <h3>✉️ <span class="lang-en">Email</span><span class="lang-fr">Email</span><span class="lang-ar">البريد</span></h3>
+                <p>contact@springflowers.ma</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; background: white; padding: 2rem; border-radius: 15px;">
+            <h3 style="color: var(--dark-pink); margin-bottom: 1rem;" class="lang-en">Find Us on the Map</h3>
+            <h3 style="color: var(--dark-pink); margin-bottom: 1rem;" class="lang-fr">Retrouvez-nous sur la Carte</h3>
+            <h3 style="color: var(--dark-pink); margin-bottom: 1rem;" class="lang-ar">اعثر علينا على الخريطة</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.383669988275!2d-7.632687684798651!3d33.5898862807356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d282b7c663f5%3A0xdb34e23c7a86c2a1!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="300" 
+                style="border:0; border-radius: 10px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>🌸 Spring Flowers | زهور الربيع | Fleurs de Printemps 🌸</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">&copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
